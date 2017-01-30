@@ -49,8 +49,9 @@ sys.path.append( os.path.join(addon_dir, "chinese", "python-2.7-modules") )
 # Quick-and-dirty trick to remove cjklib warning on a Linux with a
 # full python install, about having two different versions of
 # sqlalchemy, httplib2, ... on Ubuntu and Fedora
-sys.path = filter(
-    lambda a: not(re.search(r'(dist|site)-packages$', a)), sys.path)
+# sys.path = filter(
+#     lambda a: not(re.search(r'(dist|site)-packages$', a)), sys.path)
+# TODO: Figure out a nicer way to handle this
 
 import chinese.upgrade
 import chinese.templates.ruby ; chinese.templates.ruby.install()
