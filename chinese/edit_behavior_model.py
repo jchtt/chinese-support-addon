@@ -179,8 +179,8 @@ def update_Silhouette_fields(hanzi, dico):
     return
 
 def update_Formation_fields(hanzi, dico):
-    formation = formation.get_formation(hanzi)
-    set_all(Formation_fields, dico, to = formation)
+    formation_str = formation.get_formation(hanzi)
+    set_all(Formation_fields, dico, to = formation_str)
 
 def format_Transcription_fields(dico):
     t = colorize( accentuate_pinyin( separate_pinyin(cleanup(get_any(Transcription_fields, dico)) )))
